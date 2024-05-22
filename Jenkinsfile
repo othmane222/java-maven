@@ -55,7 +55,7 @@ pipeline {
                     def artifactURL = "${env.JENKINS_URL}/job/${env.JOB_NAME}/${env.BUILD_NUMBER}/artifact/${artifactPath}"
 
                     //Add channel name
-                    slackSend channel: 'test',
+                    slackSend channel: 'fpl',
                     message: "Un nouveau build Java est disponible: ---> Resultat: ${currentBuild.currentResult}, Job: ${env.JOB_NAME}, Build: ${env.BUILD_NUMBER} \n <${artifactURL}|Cliquer ici pour télécharger>"
                 }
             }
